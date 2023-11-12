@@ -6,8 +6,9 @@
 <section class="main-profileblock">
     <div class="container lazy page-banner" style="background-image: url('{{ setting('background') ? image_url(setting('background')) : 'https://via.placeholder.com/2000x500' }}')">
     <div class="page-banner__content">
-        <p class="page-banner__title">Bienvenue</p> 
-        <p class="page-banner__description">Nous sommes heureux de vous voir sur notre projet. Nous proposons des développements uniques et une approche spéciale pour créer des serveurs qui donnent aux joueurs beaucoup d’émotions et de moments inoubliables pendant le jeu.</p>
+    @if($message)
+        {{ $message }}
+    @endif
     </div> 
     @auth
     <div class="profile-block">
