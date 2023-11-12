@@ -1,0 +1,16 @@
+{
+    "footer_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "news_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "footer_links": [
+        {
+            "name": "Shop",
+            "value": "http://azuriom.test/shop"
+        },
+        {
+            "name": "QuantiumFlow",
+            "value": "https://quantiumflow.com"
+        }
+    ],
+    "discord-id": "1139920104616898690",
+    "twitter": null
+}

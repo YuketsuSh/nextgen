@@ -1,0 +1,11 @@
+{
+    "id": "nextgen",
+    "name": "Nextgen",
+    "description": "Theme for Azuriom",
+    "version": "1.0.0",
+    "url": "https://quantiumflow.com",
+    "authors": [
+        "Yuketsu"
+    ],
+    "azuriom_api": "1.1.0"
+}
