@@ -55,6 +55,15 @@
             <form action="{{ route('admin.themes.config', $theme) }}" method="POST" id="configForm">
                 @csrf
 
+                <div class="mb-3">
+                    <label class="form-label" for="colorInput">{{ trans('messages.fields.color') }}</label>
+                    <input type="color" class="form-control form-control-color color-picker @error('color') is-invalid @enderror" id="colorInput" name="color" value="{{ old('color', theme_config('color', '#c0392b')) }}" required>
+
+                    @error('color')
+                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                    @enderror
+                </div>
+
                 <div class="form-group">
                     <label for="discordInput">{{ trans('theme::nextgen.config.discord') }}</label>
                     <input type="text" class="form-control @error('discord-id') is-invalid @enderror" id="discordInput" name="discord-id" value="{{ old('discord-id', config('theme.discord-id')) }}">
@@ -111,6 +120,9 @@
                         </div>
                     @endforeach
                 </div>
+
+
+                
 
                 <div class="mb-3">
                     <button type="button" id="addLinkButton" class="btn btn-sm btn-success">

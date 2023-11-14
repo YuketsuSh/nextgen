@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 @include('elements.base')
+@php
+    $colorMap = [
+        'red' => '#c0392b',
+        'blue' => '#007bff',
+        'green' => '#00db12',
+        'purple' => '#9500ff',
+        'orange' => '#ffa600',
+        'yellow' => '#fff700',
+        'aqua' => '#00fbff',
+        'pink' => '#ff00cc',
+    ];
+
+    $theme = theme_config('color', 'blue');
+    $themeColor = $colorMap[$theme] ?? $theme;
+@endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="@yield('description', setting('description', ''))">
+    <meta name="theme-color" content="{{ $themeColor }}">
     <meta name="author" content="Yuketsu">
 
     <meta property="og:title" content="@yield('title')">
@@ -38,8 +54,8 @@
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js" defer></script>
-
     @stack('scripts')
+
     <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/base.css') }}" rel="stylesheet">
@@ -48,7 +64,8 @@
     <link rel="stylesheet" href="{{ theme_asset('css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('css/bootstrap-grid.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-
+    @stack('styles')
+    @include('elements.theme-color', ['color' => $themeColor])
 </head>
 <body id="home" class="home preloader-active" style="background-image: url({{ theme_asset('images/bg-body.svg') }});" x-data="body">
 @include('elements.navbar')

@@ -22,11 +22,7 @@
             @endif
         </div> 
         <div class="d-flex flex-nowrap justify-content-between align-items-center gap-10px w-100">
-            @if($notifications->count()>0)
-            <a href="#" class="button button__icon w-100 px-1 button__icon-addcount" data-count="{{ $notifications->count() }}">
-                <i class="bi bi-bell-fill"></i>
-            </a> 
-            @endif
+            @include('elements.notifications')
             <a href="{{ route('profile.index') }}" class="button button__icon w-100 px-1">
                 <i class="bi bi-person-fill"></i>
             </a> 
