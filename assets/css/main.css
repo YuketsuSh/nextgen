@@ -239,6 +239,9 @@ header.header-scroll .nav-menu{
 	opacity: 1;
 }
 @media (min-width:992px){
+	iframe.discord {
+		margin-left: 0rem;
+	}
 	.nav-menu{
 		margin-top: 0;
 		display:block !important;
@@ -252,6 +255,9 @@ header.header-scroll .nav-menu{
 		height: auto;
 		opacity: 1;
 	}
+	header.header-scroll, header {
+		/* padding: 0px 835px 0px 1px; */
+	}
 	header.header-scroll .nav-menu{
 		height: auto;
 		background-color: transparent;
@@ -263,6 +269,9 @@ header.header-scroll .nav-menu{
 	position: relative;
 }
 @media (min-width:992px){
+	header.header-scroll, header {
+		/* padding: 0px 835px 0px 1px; */
+	}
 	.nav-list{
 		display: flex;
 		-ms-align-items: center;
@@ -300,7 +309,10 @@ header.header-scroll .nav-menu{
 .nav-list li.dropdown ul li.active a{
 	color: #45a7ef;
 }
-@media (min-width:992px){
+@media (min-width: 992px){
+	header.header-scroll, header {
+		/* padding: 0px 83px 0px 1px; */
+	}
 	.nav-list li.dropdown ul{
 		padding: 20px !important;
 		display: block !important;
@@ -343,7 +355,7 @@ header.header-scroll .nav-menu{
 	position: relative;
 	text-transform:uppercase;
 	line-height:19px;
-	/* display: flex; */
+	display: block;
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
@@ -2810,7 +2822,7 @@ blockquote cite{
 	display: block;
 }
 blockquote cite:before{
-	content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â';
+	content: 'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â';
 	display: inline-block;
 	margin-right: 10px;
 }
@@ -3771,7 +3783,7 @@ blockquote:before{
 		font-size: 16px;
 	}
 	.nav-list li a{
-		line-height: 38px;
+		line-height: 40px;
 		padding: 0 15px;
 	}
 	.s-blog .post-item .btn{
@@ -4355,6 +4367,34 @@ blockquote:before{
 }
 
 @media(max-width: 575px){
+	.to-top {
+		bottom: 6rem!important;
+		right: 15rem!important;
+	}
+	.preloader-cover {
+		height: 0;
+		width: 4000px;
+		top: 19rem!important;
+		left: 12rem!important;
+		transform: translate(-50%,-50%) rotate(45deg);
+		background: #131213;
+		position: fixed;
+		z-index: 999;
+		overflow: hidden;
+		transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1) .3s;
+		overflow: hidden;
+		will-change: top, left;
+	}
+	.profile-block{
+		display: none!important;
+	}
+	p.azuriom {
+		margin-left: 17rem!important;
+    	margin-top: 2rem!important;
+	}
+	iframe.discord {
+		left: -15rem;
+	}
 	.s-banners{
 		padding-bottom: 70px;
 	}
@@ -4399,7 +4439,7 @@ blockquote:before{
 		font-size: 15px;
 	}
 	header.header-scroll, header {
-		padding: 10px 80px 10px 0;
+		padding: 0px 835px 0px 1px;
 	}
 	.header-icon li.search form{
 		right: auto;
@@ -4559,6 +4599,7 @@ blockquote:before{
 	}
 	.nav-btn{
 		top: 0;
+		left: 20rem;
 		transform: none;
 	}
 	.testimonial-item {
@@ -4582,6 +4623,23 @@ blockquote:before{
 }
 
 @media(max-width: 479px){
+	.preloader-cover {
+		height: 0;
+		width: 4000px;
+		top: 70%;
+		left: 23%;
+		transform: translate(-50%,-50%) rotate(45deg);
+		background: #131213;
+		position: fixed;
+		z-index: 999;
+		overflow: hidden;
+		transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1) .3s;
+		overflow: hidden;
+		will-change: top, left;
+	}
+	header.header-scroll, header {
+		padding: 10px 0px 0px 0px;
+	}
 	.reviews-form .inp-name, .reviews-form .inp-email {
 		width: 100%;
 	}
@@ -5250,5 +5308,6 @@ button.btn.btn-danger.closed {
 }
 
 iframe.discord {
+	position: relative;
     margin-left: 15rem;
 }

@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="{{ theme_asset('css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('css/bootstrap-grid.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
 </head>
 <body id="home" class="home preloader-active" style="background-image: url({{ theme_asset('images/bg-body.svg') }});" x-data="body">
 @include('elements.navbar')
