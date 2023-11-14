@@ -7,6 +7,12 @@
     "authors": [
         "Yuketsu"
     ],
+<<<<<<< HEAD
     "azuriom_api": "1.0.0",
     "apiId": "999"
 }
+=======
+    "azuriom_api": "1.1.0",
+    "apiId": "939"
+}
+>>>>>>> 58f359d1da82bd5549ad57ccaa8b2aa5cbdeded1
