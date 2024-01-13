@@ -15,6 +15,4 @@ NextGen, a perfect theme for having a site with a modern design, with fluid anim
 > Step3 : Create nextgen dir on to <src>/resources/themes<br>
 > Step4 : Upload source on to nextgen dir<br>
 
-for view animation join my discord server and go to creations forums.
-
-for view animation join mi [discord server](https://discord.gg/quantiumflow) and go to creations forums
+for view animation join my [discord server](https://discord.gg/aegisteam) and go to creations forums.
